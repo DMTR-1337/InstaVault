@@ -9,11 +9,11 @@
 
 ### **Getting Started**
 1. Ensure **Docker** and **Docker Compose** are installed.
-2. git clone https://github.com/DMTR-1337/InstaVault.git
-3. cd InstaVault-main
-4. Start the environment:
+2. Start the environment:
    ```bash
+   https://github.com/DMTR-1337/InstaVault.git
+   cd InstaVault-main
    docker-compose up -d
    ```
-
+3. Capture the Flag!
    **Walkthrough**: Coming soon
