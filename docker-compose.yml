@@ -1,0 +1,36 @@
+services:
+  ctf-web:
+    image: php:8.1-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    entrypoint: 
+      - sh
+      - -c
+      - |
+        # Use semicolons so one failure doesn't restart loop container
+        apt-get update; 
+        apt-get install -y python3 --no-install-recommends;
+        
+        echo 'AddHandler application/x-httpd-php .php5' >> /etc/apache2/apache2.conf
+        mkdir -p /var/www/html/uploads
+        
+        chown -R www-data:www-data /var/www/html
+        chmod -R 755 /var/www/html
+        chmod -R 777 /var/www/html/uploads
+        
+        # Flag and Perms
+        echo 'DMTR{PHP_REVERSE_SHELL_2026}' > /root/flag.txt
+        chown root:root /root/flag.txt
+        chmod 600 /root/flag.txt
+        
+        # The SUID vuln
+        chmod +s /usr/bin/find
+        
+        # webdir cleanup
+        chown -R www-data:www-data /var/www/html
+        chmod -R 777 /var/www/html/uploads
+        
+        # We need to use exec to keep the container alive
+        exec apache2-foreground

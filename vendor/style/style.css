@@ -1,0 +1,102 @@
+/*Page layout starts here*/
+body /*Body*/
+{
+    background: #0f172a;
+    color: #f1f5f9;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+.nav /*Nav styling*/
+{
+    text-align: center;
+    margin: 40px 0;
+}
+h1 /*Header styling*/
+{
+    color: #38bdf8;
+    margin: 0;
+    font-size: 2.5rem;
+}
+p /*Paragraph styling*/
+{
+    color: #94a3b8;
+    margin-top: 5px;
+}
+/*Page layout ends here*/
+
+/*Uploading starts here*/
+.container /*Upload container*/
+{
+    background: #1e293b;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 450px;
+    margin: 0 auto 50px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.upload-section /*Upload section*/
+{
+    border: 2px dashed #334155;
+    padding: 20px;
+    border-radius: 8px;
+}
+.btn-submit /*Submit button*/
+{
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+.btn-submit:hover /*Submit button hover effect*/
+{
+    background: #0284c7;
+}
+/*Uploading ends here*/
+
+/*Feed starts here*/
+#feed /*Feed itself*/
+{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+.post /*Post container*/
+{
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+}
+.post img /*Post image*/
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #0f172a;
+}
+.post-info /*Post information*/
+{
+    padding: 15px;
+    font-size: 0.85rem;
+    border-top: 1px solid #334155;
+}
+.post-info a /*Post href attribute*/
+{
+    color: #38bdf8;
+    text-decoration: none;
+    word-break: break-all;
+    font-weight: 600;
+}
+/*Feed ends here*/

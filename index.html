@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Page Metadata starts here-->
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="vendor/style/style.css"> <!--External CSS Link-->
+    <!--Page Metadata ends here-->
+</head>
+<body>
+    <!--Nav section starts here-->
+    <div class="nav"> 
+        <h1>InstaVault</h1>
+        <p>Legacy Internal Social Media</p>
+    </div>
+    <!--Nav section ends here-->
+
+    <!--Container & Upload section starts here-->
+    <div class="container">
+        <div class="upload-section">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="fileToUpload" required>
+                <button type="submit" name="submit" class="btn-submit">Post to Feed</button>
+            </form>
+        </div>
+    </div>
+    <!--Container & Upload section ends here-->
+
+    <!--Feed starts here-->
+    <div id="feed">
+        </div>
+    <!--Feed ends here-->
+
+    <script src="script.js"></script><!--External js file link-->
+</body>
+</html>
