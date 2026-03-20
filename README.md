@@ -16,4 +16,4 @@
    docker-compose up -d
    ```
 3. Capture the Flag!
-   **Walkthrough**: Coming soon
+   **Walkthrough**: https://www.youtube.com/watch?v=zdjP6ExLCaw
